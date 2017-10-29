@@ -1,0 +1,199 @@
+/* Icon set - http://ionicons.com/ */
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+figure.snap {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+  background: #ee9572;
+  color: #333;
+  text-align: center;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  z-index: 4;
+  opacity:1;
+}
+
+figure.snap * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease; }
+
+figure.snap img {
+  max-width: 100%;
+  vertical-align: top; }
+
+figure.snap .image {
+  position: relative;
+  border-bottom: 6px solid #ee9572;
+  z-index: 1; }
+
+figure.snap .image:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: #ee9572 transparent transparent transparent;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15px);
+  -ms-transform: translate(-50%, -15px);
+  transform: translate(-50%, -15px);
+  z-index: -1;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease; }
+
+figure.snap .image p {
+  font-weight: 500;
+  margin: 0;
+  padding: 0 30px;
+  line-height: 1.6em;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: #000;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+  font-style: italic; }
+
+figure.snap figcaption {
+  background-color: #ffffff;
+  padding: 4px; }
+
+figure.snap h3 {
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+figure.snap h3 span {
+  font-weight: 800; }
+
+figure.snap h5 {
+  margin: 0 0 10px;
+  font-weight: 400; }
+
+figure.snap i {
+  margin-right: 5px;
+  display: inline-block;
+  font-size: 24px;
+  color: #000000;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background: white;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.05); }
+
+figure.snap i:hover {
+  background-color: #ee9572;
+  color: black !important; }
+
+figure.snap:hover .image:before,
+figure.snap.hover .image:before {
+  border-color: #ee9572 transparent transparent transparent;
+  -webkit-transform: translate(-50%, 0px);
+  -ms-transform: translate(-50%, 0px);
+  transform: translate(-50%, 0px); }
+
+figure.snap:hover .image p,
+figure.snap.hover .image p {
+  opacity: 1; }
+
+figure.snap:hover img,
+figure.snap.hover img {
+  opacity: 0.2;
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(50%); }
+
+  figure {
+      margin: 1em 30px;
+  }
+
+.info{
+   opacity: 1;
+}
+
+.info h1{
+  text-transform: uppercase;
+  color:#000;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight:bold;
+}
+.info h1 span{
+  text-transform: uppercase;
+  color:#000;
+  font-weight:100;
+}
+
+.info h3{
+  color:#000;
+  display: inline-block;
+  font-family: "Poiret One", cursive;
+}
+
+.info p{
+  color:#000;
+  display: inline-block;
+  font-weight: lighter;
+  text-align:left;
+  letter-spacing: rem(2px);
+}
+
+.info button{
+  text-transform: uppercase;
+  color:#000;
+  display: inline-block;
+  text-align: left;
+}
+
+.info .btn-outline-info{
+  width: 150px;
+  height:60px;
+  text-align: center;
+  border-radius: 0;
+  font-size: rem(30px);
+  font-weight: lighter;
+  border-color: #000;
+}
+
+.info .btn-outline-info:hover{
+background-color: rgba(0, 128, 255,0.5);
+color:rgba(0, 0, 0,1);
+@include transition();
+@include myTransform();
+transform: scale(1.1,1.1);
+}
+
+.arrows{
+  @include size(60px);
+  position: absolute;
+  left:22%;
+  //border-radius: 50%;
+  //border:0.5px solid rgba(255, 255, 2555, 0.5);;
+}
+
+.arrows .unu{
+  margin-left: 20px;
+  margin-top:5px;
+}
+
+.arrows .doi{
+  margin-left: 20px;
+}
+
+.arrows .trei{
+  margin-left: 20px;
+}

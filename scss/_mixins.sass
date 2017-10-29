@@ -1,0 +1,36 @@
+// === MEDIA QUERIES ===
+@mixin tiny-screens()
+  @media only screen and (max-width: 320px)
+    @content
+
+
+
+@mixin small-screens()
+  @media only screen and (max-width: 480px)
+    @content
+
+
+
+@mixin medium-screens()
+  @media only screen and (max-width: 640px)
+    @content
+
+
+
+@mixin medium-large-screens()
+  @media only screen and (max-width: 960px)
+    @content
+
+@mixin responsive()
+  @media only screen and (max-width: 767px)
+    @content
+
+
+
+@mixin myTransform()
+  transform: scale(0.90,0.90)
+
+@mixin transition()
+  transition-property: all
+  transition-duration: 0.4s
+  transition-timing-function: ease-out

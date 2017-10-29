@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Pacifico|Luckiest+Guy|Anton|Poiret+One|Fjalla+One|Open+Sans:300|Josefin+Sans:100|Raleway:300|Roboto:300|BioRhyme|Black+Ops+One|Bungee|Wire+One|Bungee+Shade|Creepster|Ewert|Fruktur|Gravitas+One|Monoton|Rubik:900|Permanent+Marker|Pacifico')
+
+
+.bg
+  background: url('https://images.unsplash.com/photo-1508349083404-75b96ae8f41a?w=1566&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D')
+  background-size: cover
+  background-attachment: fixed
+  background-position: top center
+  padding-top: 5%
+  padding-bottom: 5%
+
+
+
+@-webkit-keyframes scroll
+  100%
+    background-position: 0px -3000px
+
+
+@-moz-keyframes scroll
+  100%
+    background-position: 0px -3000px
+
+
+@-o-keyframes scroll
+  100%
+    background-position: 0px -3000px
+
+
+@-ms-keyframes scroll
+  100%
+    background-position: 0px -3000px
+
+
+@keyframes scroll
+  100%
+    background-position: 0px -3000px
+
+
+.bg_2
+  opacity: 1
+
+.s-link
+  background: transparent
+  border-left: color(complement, normal, 0) solid $b-border-width
+  color: rgba(0,0,0,1)
+  font-family: $b-font-family
+  font-size: $b-font-size
+  //font-weight: $b-font-weight;
+  margin-left: $b-margin-left
+  text-decoration: none
+  transition: $b-transition
+  width: auto
+  z-index: 6
+
+  &:hover,
+  &--active
+    border-left: rgba(0,0,0,1) solid $b-border-width
+    text-decoration: none
+    color: rgba(0,0,0,1)
+    padding-left: $b-txt-pad

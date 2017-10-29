@@ -1,0 +1,194 @@
+
+$b-height: 60px; //Height (and width) of the burger menu
+$b-margin-top: 30px; //Burger menu margin (distance from top)
+$b-margin-left: 30px; //Burger menu margin (distance from left)
+$b-border-width: 1px; //Width of the borders and 'buns'
+$b-bun-width: 25px; //Width of the 'buns'
+$b-bun-height: $b-border-width; //Height of the 'buns'
+$b-border-radius: 50%; //Change the border radius of the menu
+
+$b-trans-speed: .4s; //Transition speed settings
+$b-transition: all $b-trans-speed ease; //Transitions
+
+$b-font-size: 24px; //Font size of brand and links
+$b-font-family: 'Open Sans', sans-serif; //Font family of the brand and links
+$b-font-weight: 300; //Font weight of brand and links
+$b-txt-pad: 30px; //Left padding on both brand and links
+
+$b-line-height: ($b-height / 2 - ($b-font-size / 2.8)); //Vertically centers brand to menu
+$b-txt-pad-top: ($b-margin-top + $b-height + $b-txt-pad); //Top margin for first link element
+$b-bun-width-half: ($b-bun-width / 2); //Half bun width used for calculation
+$b-pad-left: ($b-height / 2 - $b-bun-width-half - 2); //Horizontally centers bun in menu
+$b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in menu
+
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-250px, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-250px, 0, 0);
+    visibility: hidden;
+  }
+}
+
+.nav{
+  position:fixed;
+  z-index: 10;
+  opacity: 1;
+}
+
+
+.s-nav {
+  position: fixed;
+  z-index: 11;
+
+  &:not(.open) {
+    visibility: hidden;
+  }
+
+  li {
+    color: rgba(0,0,0,1);
+    list-style-type: none;
+    padding: 10px;
+    text-align: left;
+    transform: translateX(-250px);
+  }
+
+  li:not(.open) {
+    animation-duration: $b-trans-speed;
+    animation-fill-mode: both;
+    animation-name: slideOutLeft;
+  }
+
+  li:first-child {
+    padding-top: $b-txt-pad-top;
+  }
+
+  &.open {
+    visibility: visible;
+
+    li {
+      animation-duration: $b-trans-speed;
+      animation-fill-mode: both;
+      animation-name: slideInLeft;
+    }
+  }
+}
+
+.s-link {
+  background: transparent;
+  border-left: rgba(0,0,0,1) solid $b-border-width;
+  color: rgba(0,0,0,1) ;
+  font-family: $b-font-family;
+  font-size: $b-font-size;
+  font-weight: bolder;
+  //font-weight: $b-font-weight;
+  margin-left: $b-margin-left;
+  text-decoration: none;
+  transition: $b-transition;
+  width: auto;
+  z-index: 6;
+
+  &:hover,
+  &--active {
+    border-left: rgba(0,0,0,1) solid $b-border-width;
+    text-decoration: none;
+    color:rgba(0,0,0,1);
+    padding-left: $b-txt-pad;
+  }
+}
+
+.s-menu {
+  //background: rgba(255, 255, 255, 0.1);
+  //border: 1px solid ;
+  border-radius: $b-border-radius;
+  cursor: pointer;
+  display: inline-block;
+  height: $b-height;
+  padding-left: $b-pad-left;
+  padding-top: $b-pad-top;
+  position: relative;
+  transition: $b-transition;
+  user-select: none;
+  width: $b-height;
+  z-index: 12;
+
+  &:hover {
+    //border: color(complement) solid $b-border-width;
+  }
+}
+
+.s-bun {
+  background: rgba(0,0,0,1);
+  position: relative;
+  transition: $b-transition;
+
+  &--top {
+    height: $b-bun-height;
+    top: 0;
+    width: $b-bun-width;
+  }
+
+  &--mid {
+    height: $b-bun-height;
+    top: 8px;
+    width: $b-bun-width;
+  }
+
+  &--bottom {
+    height: $b-bun-height;
+    top: 16px;
+    width: $b-bun-width;
+  }
+}
+
+
+.s-container {
+  height: $b-height;
+  left: $b-margin-left;
+  position: absolute;
+  top: $b-margin-top;
+
+  &:hover:not(.open) {
+    .bun-top,
+    .bun-mid,
+    .bun-bottom {
+      background: rgba(0,0,0,1);
+    }
+  }
+
+  &.open {
+    .b-main {
+      border: rgba(0,0,0,1) solid $b-border-width;
+    }
+
+    .s-bun--top {
+      background: rgba(0,0,0,1);
+      top: 9px;
+      transform: rotate(45deg);
+    }
+
+    .s-bun--mid {
+      opacity: 0;
+    }
+
+    .s-bun--bottom {
+      background:rgba(0,0,0,1);
+      top: 5px;
+      transform: rotate(-45deg);
+    }
+
+  }
+}

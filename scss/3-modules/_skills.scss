@@ -1,0 +1,105 @@
+#skills{
+  background: url('https://images.unsplash.com/photo-1508349083404-75b96ae8f41a?w=1566&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.skill{
+  padding-top: 10px;
+  font-size: ($header-size + 40px);
+  font-family: 'Monoton', cursive;
+  color: rgba(0,0,0,1);
+  @include tiny-screens{
+  font-size:$header-size ;
+  };
+}
+
+
+.html:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(228, 77, 38,0.95);
+  cursor: crosshair;
+}
+
+.css:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(2, 112, 187,0.95);
+  cursor: crosshair;
+}
+
+.wordpress path{
+  fill: #000;
+}
+
+.wordpress:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(29, 139, 190,0.95);
+  cursor: crosshair;
+}
+
+.ai:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(38, 19, 0,0.95);
+  cursor: crosshair;
+}
+
+.ps:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(0, 29, 38,0.95);
+  cursor: crosshair;
+}
+
+.dw:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(6, 37, 0,0.95);
+  cursor: crosshair;
+}
+
+.js:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(240, 218, 80,0.95);
+  cursor: crosshair;
+}
+
+.sass:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(205, 102, 154,0.95);
+  cursor: crosshair;
+}
+
+.github:hover path{
+  @include transition();
+  @include myTransform();
+  fill: rgba(36, 41, 46,0.95);
+  cursor: crosshair;
+}
+
+
+.customPadding{
+  padding-top: 15px;
+}
+
+.customPadding .col-sm-4{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 20%;
+  @include tiny-screens{
+  max-width: 34%;
+  };
+  @include small-screens{
+  max-width: 30%;
+  };
+}
+
+#nextPortfolio{
+  margin:10%;
+}

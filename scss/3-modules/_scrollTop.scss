@@ -1,0 +1,36 @@
+
+
+.scroll-to-top {
+  //@include size(80px) ;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	position: fixed;
+	bottom: 150px;
+	right: 60px;
+	display: none;
+	z-index: 2000;
+	color: rgba(0,0,0,1);
+	transition: transform 0.3s;
+	overflow: hidden;
+  //border-radius: 50%;
+}
+
+.fa-chevron-circle-up{
+  @include size(80px) ;
+  //font-size: 80px;
+	@include tiny-screens{
+		font-size: rem(50px);
+	};
+	@include small-screens{
+			font-size: rem(80px);
+	};
+}
+
+.fa-chevron-circle-up:hover{
+
+  @include transition();
+  transform: scale(1.2,1.2);
+  cursor: pointer;
+  color:lighten( rgba(0,0,0,0.5) , 30% );
+}

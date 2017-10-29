@@ -1,0 +1,21 @@
+$baseFontSize : 14
+@function rem($pixels, $context: $baseFontSize)
+  @if (unitless($pixels))
+    $pixels: $pixels * 1px
+
+
+  @if (unitless($context))
+    $context: $context * 1px
+
+
+  @return $pixels / $context * 1rem
+
+
+
+
+@function color($group, $shade:normal, $transparency:1)
+  @each $color in $color-stack
+    $c-group: map-get($color, group)
+    $c-shade: map-get($color, id)
+    @if($group == map-get($color, group) and $shade == map-get($color, id))
+      @return rgba(map-get($color, color), $transparency)

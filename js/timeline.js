@@ -1,1 +1,35 @@
-(function(a){a.fn.timeline=function(){var b={id:a(this),item:a(this).find(".timeline-item"),activeClass:"timeline-item--active",img:".timeline__img"};b.item.eq(0).addClass(b.activeClass),b.id.css("background-image","url("+b.item.first().find(b.img).attr("src")+")");var c=b.item.length;a(window).scroll(function(){var d,e,f=a(this).scrollTop();b.item.each(function(g){e=a(this).offset().top,d=a(this).height()+a(this).offset().top;a(this);g==c-2&&f>e+a(this).height()/2?(b.item.removeClass(b.activeClass),b.id.css("background-image","url("+b.item.last().find(b.img).attr("src")+")"),b.item.last().addClass(b.activeClass)):f<=d-40&&f>=e&&(b.id.css("background-image","url("+a(this).find(b.img).attr("src")+")"),b.item.removeClass(b.activeClass),a(this).addClass(b.activeClass))})})}})(jQuery),$("#timeline-1").timeline();
+(function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css("background-image", "url(" + selectors.item.first().find(selectors.img).attr("src") + ")");
+
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = ($(this).height() + $(this).offset().top);
+        var that = $(this)
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css("background-image", "url(" + selectors.item.last().find(selectors.img).attr('src') + ")");
+          selectors.item.last().addClass(selectors.activeClass)
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css("background-image", "url(" + $(this).find(selectors.img).attr('src') + ")");
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+
+      });
+    });
+
+  }
+})(jQuery);
+$("#timeline-1").timeline();
