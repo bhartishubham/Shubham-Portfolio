@@ -119,4 +119,8 @@
 	font-weight: bolder;
 	margin-top:rem(-32px);
 	color:#000;
+	@include tiny-screens{
+		font-size: rem(24px);
+		margin-top:rem(-25px);
+	};
 }

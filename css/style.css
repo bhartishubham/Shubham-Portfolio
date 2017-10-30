@@ -966,6 +966,10 @@ figure {
   font-weight: bolder;
   margin-top: -2rem;
   color: #000; }
+  @media only screen and (max-width: 320px) {
+    .phone {
+      font-size: 1.5rem;
+      margin-top: -1.5625rem; } }
 
 .timeline {
   display: -webkit-box;
