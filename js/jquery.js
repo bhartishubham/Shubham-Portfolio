@@ -83,16 +83,13 @@ $("#js-rotating").Morphext({
     	}
     });
 
-    $('.scroll-to-top').on('click', function(e) {
-      e.preventDefault();
-    	$('html, body').animate({scrollTop : 0}, 800);
-    });
 
 
           /* animate skill bars */
 
 
 // Video FullScreen //
+$('#home_1').scrollTo();
 $('#next').scrollTo();
 $('#nextTimeline').scrollTo();
 $('#nextSkills').scrollTo();
