@@ -607,7 +607,7 @@ th {
   font-family: 'Luckiest Guy', cursive; }
 
 .bg {
-  background-color: #f2f2f2;
+  background: url("https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   background-size: cover;
   background-attachment: fixed;
   background-position: top center;
