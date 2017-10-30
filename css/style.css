@@ -520,7 +520,7 @@ th {
 
 .video_height {
   height: 100vh;
-  background-color: #f2f2f2;
+  background: url("https://images.unsplash.com/photo-1466786784937-3e682c802b14?w=1402&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
@@ -607,7 +607,7 @@ th {
   font-family: 'Luckiest Guy', cursive; }
 
 .bg {
-  background: url("https://images.unsplash.com/photo-1508349083404-75b96ae8f41a?w=1566&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-color: #f2f2f2;
   background-size: cover;
   background-attachment: fixed;
   background-position: top center;
