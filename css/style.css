@@ -606,6 +606,9 @@ th {
 #js-rotating {
   font-family: 'Luckiest Guy', cursive; }
 
+body {
+  overflow: hidden; }
+
 .bg {
   background: url("https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   background-size: cover;
@@ -655,6 +658,33 @@ th {
     text-decoration: none;
     color: black;
     padding-left: 30px; }
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */ }
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */ }
 
 /* Icon set - http://ionicons.com/ */
 figure.snap {

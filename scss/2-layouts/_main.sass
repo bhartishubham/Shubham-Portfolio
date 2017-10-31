@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Pacifico|Luckiest+Guy|Anton|Poiret+One|Fjalla+One|Open+Sans:300|Josefin+Sans:100|Raleway:300|Roboto:300|BioRhyme|Black+Ops+One|Bungee|Wire+One|Bungee+Shade|Creepster|Ewert|Fruktur|Gravitas+One|Monoton|Rubik:900|Permanent+Marker|Pacifico')
 
+body
+  overflow: hidden
+
 
 .bg
   background: url('https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D')
@@ -58,3 +61,32 @@
     text-decoration: none
     color: rgba(0,0,0,1)
     padding-left: $b-txt-pad
+
+
+/* Preloader
+
+#preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #fff
+  /* change if the mask should have another color then white
+  z-index: 99
+  /* makes sure it stays on top
+
+#status
+  width: 200px
+  height: 200px
+  position: absolute
+  left: 50%
+  /* centers the loading animation horizontally one the screen
+  top: 50%
+  /* centers the loading animation vertically one the screen
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif)
+  /* path to your loading animation
+  background-repeat: no-repeat
+  background-position: center
+  margin: -100px 0 0 -100px
+  /* is width and height divided by two
