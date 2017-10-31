@@ -71,7 +71,7 @@ body
   left: 0
   right: 0
   bottom: 0
-  background-color: #242F3F
+  background-color: #eaecfa
   width: auto
   height: 100vh
     /* change if the mask should have another color then white
@@ -80,42 +80,116 @@ body
 
 
 
-.loader-inner
-  vertical-align: top
-  display: inline-block
-  width: 100%
-  background-color: #fff
-  animation: loader-inner 2s infinite ease-in
+.loader
+  width: 250px
+  height: 50px
+  line-height: 50px
+  text-align: center
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%)
+  font-family: helvetica, arial, sans-serif
+  text-transform: uppercase
+  font-weight: 900
+  color: #ce4233
+  letter-spacing: 0.2em
 
-@keyframes loader
+.loader::before, .loader::after
+  content: ""
+  display: block
+  width: 15px
+  height: 15px
+  background: #ce4233
+  position: absolute
+  -webkit-animation: load .7s infinite alternate ease-in-out
+          animation: load .7s infinite alternate ease-in-out
+
+.loader::before
+  top: 0
+
+.loader::after
+  bottom: 0
+
+
+.loader
+  width: 250px
+  height: 50px
+  line-height: 50px
+  text-align: center
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%)
+  font-family: helvetica, arial, sans-serif
+  text-transform: uppercase
+  font-weight: 900
+  color: #ce4233
+  letter-spacing: 0.2em
+
+.loader::before, .loader::after
+  content: ""
+  display: block
+  width: 15px
+  height: 15px
+  background: #ce4233
+  position: absolute
+  -webkit-animation: load 0.7s infinite alternate ease-in-out
+          animation: load 0.7s infinite alternate ease-in-out
+
+.loader::before
+  top: 0
+
+.loader::after
+  bottom: 0
+
+
+@-webkit-keyframes load
   0%
-    transform: rotate(0deg)
-
-  25%
-    transform: rotate(180deg)
+    left: 0
+    height: 30px
+    width: 15px
 
   50%
-    transform: rotate(180deg)
-
-  75%
-    transform: rotate(360deg)
+    height: 8px
+    width: 40px
 
   100%
-    transform: rotate(360deg)
+    left: 235px
+    height: 30px
+    width: 15px
 
 
-@keyframes loader-inner
+
+@keyframes load
   0%
-    height: 0%
-
-  25%
-    height: 0%
+    left: 0
+    height: 30px
+    width: 15px
 
   50%
-    height: 100%
-
-  75%
-    height: 100%
+    height: 8px
+    width: 40px
 
   100%
-    height: 0%
+    left: 235px
+    height: 30px
+    width: 15px
+
+
+@keyframes load
+  0%
+    left: 0
+    height: 30px
+    width: 15px
+
+  50%
+    height: 8px
+    width: 40px
+
+  100%
+    left: 235px
+    height: 30px
+    width: 15px
