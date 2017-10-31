@@ -126,9 +126,9 @@ $(function() {
           left: '20px'
       },
       content:  '<div>Shubham Bharti</div>' +
-                '<div># C-8</div>' +
-               '<div>Imtech Housing, Sector 39-A</div>' +
-               '<div><strong>Chandigarh</strong></div>',
+                '<div>Imtech Housing, Sector 39-A</div>' +
+               '<div>Chandigarh</div>' +
+               '<div><strong>+91 9501140321</strong></div>',
       showCloseButton: true,
       closeOnMapClick: true,
       padding: '48px',
