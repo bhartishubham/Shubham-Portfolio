@@ -667,7 +667,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: #eaecfa;
-  width: 100vh;
+  width: auto;
   height: 100vh;
   /* change if the mask should have another color then white */
   z-index: 99;
