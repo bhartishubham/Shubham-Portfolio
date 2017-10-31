@@ -109,13 +109,13 @@ $(function() {
     var map = new google.maps.Map($('.map-canvas')[0], {
         zoom: 14,
         styles: mapStyle,
-        center: new google.maps.LatLng(30.7469851,76.7303744)
+        center: new google.maps.LatLng(30.747111, 76.730411)
     });
 
     // Add a marker
     var marker = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(30.7469851,76.7303744)
+        position: new google.maps.LatLng(30.747111, 76.730411)
     });
 
     // Add a Snazzy Info Window to the marker
