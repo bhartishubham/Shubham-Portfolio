@@ -365,15 +365,15 @@
 
             <form id="contact" action="https://formspree.io/shubhambharti94@gmail.com" method="post" data-scrollreveal="enter top after 1s">
               <div class="left">
-                <input type="text" placeholder="Name" required="required"/>
-                <input type="email" placeholder="Email" required="required"/>
-                <input type="text" placeholder="Subject" required="required"/>
+                <input type="text" placeholder="Name" name="name" required="required"/>
+                <input type="email" placeholder="Email" name="_replyto" required="required"/>
+                <input type="text" placeholder="Subject" name="_subject" required="required"/>
               </div>
               <div class="right">
-                <textarea placeholder="Message" required="required"></textarea>
+                <textarea placeholder="Message" name="_subject" required="required"></textarea>
               </div>
               <div class="send-button cl">
-                <button type="submit">Send</button>
+                <button type="submit" value="Send">Send</button>
               </div>
             </form>
           </div>
