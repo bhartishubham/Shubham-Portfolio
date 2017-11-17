@@ -1073,7 +1073,7 @@ figure {
   -webkit-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-  color: #C83683; }
+  color: #000; }
 
 .insta .fa-border:hover {
   padding: .2em .25em .15em;
