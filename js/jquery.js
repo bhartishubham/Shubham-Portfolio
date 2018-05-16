@@ -2,7 +2,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
   $('.loader').fadeOut(); // will first fade out the loading animation
   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
   $('body').delay(350).css({'overflow':'visible'});
-})
+});
 
 
 
@@ -126,7 +126,7 @@ $(function() {
           left: '20px'
       },
       content:  '<div>Shubham Bharti</div>' +
-                '<div>Imtech Housing, Sector 39-A</div>' +
+                '<div>#c-8, Imtech Housing, Sector 39-A</div>' +
                '<div>Chandigarh</div>' +
                '<div><strong>+91 9501140321</strong></div>',
       showCloseButton: true,
